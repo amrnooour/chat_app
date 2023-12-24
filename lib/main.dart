@@ -1,6 +1,7 @@
 import 'package:chat_app/firebase_options.dart';
 import 'package:chat_app/ui/screens/auth/login/login.dart';
 import 'package:chat_app/ui/screens/auth/register/register.dart';
+import 'package:chat_app/ui/screens/home/home.dart';
 import 'package:chat_app/ui/screens/splash/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         Login.routeName :(_)=> Login(),
         Register.routeName :(_)=> Register(),
-        Splash.routeName :(_)=> Splash()
+        Splash.routeName :(_)=> Splash(),
+        Home.routeName :(_)=> Home()
       },
       initialRoute: Splash.routeName,
     );
