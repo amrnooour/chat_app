@@ -38,11 +38,11 @@ class _RegisterState extends State<Register> implements RegisterNavigator{
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   SizedBox(height: height*0.3,),
-                  CustomTextField(label: "first Name", controller: viewModel.nameController, isPassword: false, type: TextInputType.text),
+                  CustomTextField(label: "first Name", controller: viewModel.nameController, isPassword: false, type: TextInputType.text,hint: "",),
                   SizedBox(height: 20,),
-                  CustomTextField(label: "email", controller: viewModel.emailController, isPassword: false, type: TextInputType.text),
+                  CustomTextField(label: "email", controller: viewModel.emailController, isPassword: false, type: TextInputType.text,hint: "",),
                   SizedBox(height: 20,),
-                  CustomTextField(label: "password", controller: viewModel.passwordController, isPassword: true, type: TextInputType.text),
+                  CustomTextField(label: "password", controller: viewModel.passwordController, isPassword: true, type: TextInputType.text,hint: "",),
                   SizedBox(height: 50,),
                   CustomButton(onPressed: (){
                     viewModel.createAccount();

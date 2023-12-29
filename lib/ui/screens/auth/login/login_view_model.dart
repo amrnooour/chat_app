@@ -20,6 +20,7 @@ class LoginViewModel{
       DocumentSnapshot<Map<String,dynamic>> doc =await getFirestoreUser(credential.user!.uid);
       var map =doc.data();
       MyUser user = MyUser(id: map!["id"], email: map!["email"], userName: map!["userName"]);
+      MyUser.currentUser = user;
       navigator!.hideLoading();
       navigator!.navigateToHomeScreen();
     } on FirebaseAuthException catch (e) {
